@@ -1,21 +1,20 @@
-$(document).ready(function() {
-    
+$(document).ready(function(){
+
     $('.btn-find').click(function(e){
         e.preventDefault()
 
         var cep = $('#CEP').val()
 
-        var find = `http://viacep.com.br/ws/${cep}/json/`
-
+        var find = `https://viacep.com.br/ws/${cep}/json`
+ 
         console.log(find)
-
         $.ajax({
-            dataType: 'JSON',
+            dataType:'JSON',
             type: 'GET',
             assync: true,
             url: find,
-            success: function(dados) {            
-                $('#logradouro').val(dados.logradouro)
+            success: function(dados){
+                $('#longradouro').val(dados.longradouro)
                 $('#bairro').val(dados.bairro)
                 $('#localidade').val(dados.localidade)
                 $('#uf').val(dados.uf)
