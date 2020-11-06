@@ -11,7 +11,7 @@
       if ('servicerWorker' in navigator) {
         window.addEventListener('load', function(){
           navigator.serviceWorker.register('sw.js').then(function(registration){
-            console.log('Service Worker resgistrado, com escopo: ', registration.scope)
+            console.log('Service Worker resgistrado, com escopo: ', registration.scopo)
           }, function (err) {
             console.log('Erro ao registrar o Service Worker: ', err)
           })
