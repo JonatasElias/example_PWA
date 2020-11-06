@@ -14,7 +14,7 @@ $(document).ready(function(){
             assync: true,
             url: find,
             success: function(dados){
-                $('#longradouro').val(dados.longradouro)
+                $('#logradouro').val(dados.logradouro)
                 $('#bairro').val(dados.bairro)
                 $('#localidade').val(dados.localidade)
                 $('#uf').val(dados.uf)
