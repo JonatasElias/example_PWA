@@ -8,7 +8,7 @@
     <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     
-    <script>
+    <!-- <script>
       if ("serviceWorker" in navigator) {
             if (navigator.serviceWorker.controller) {
                 console.log("[Aplicativo] funcionário de serviço ativo encontrado, não há necessidade de registrar");
@@ -29,6 +29,22 @@
             console.log('Registro do Service Worker não realizado')
           })
         } */
+    </script> -->
+    <script>
+      // This is the "Offline page" service worker
+
+      // Add this below content to your HTML page inside a <script type="module"></script> tag, or add the js file to your page at the very top to register service worker
+      // If you get an error about not being able to import, double check that you have type="module" on your <script /> tag
+
+/*
+ This code uses the pwa-update web component https://github.com/pwa-builder/pwa-update to register your service worker,
+ tell the user when there is an update available and let the user know when your PWA is ready to use offline.
+*/
+
+    import 'https://cdn.jsdelivr.net/npm/@pwabuilder/pwaupdate';
+
+    const el = document.createElement('pwa-update');
+    document.body.appendChild(el);
     </script>
   </head>
 <body>
